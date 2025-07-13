@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import {Component, signal, output, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-control-panel',
@@ -10,6 +10,9 @@ export class ControlPanel {
   protected readonly faceCount = signal<number>(0);
   protected readonly isAnalyzeEnabled = signal<boolean>(false);
   protected readonly isDownloadEnabled = signal<boolean>(false);
+
+  // ‘Output’ para comunicar com o componente pai, ou seja, usar o pai para enviar a imagem para image-panel
+  imageSelected = output<File>();
 
   onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
@@ -30,6 +33,9 @@ export class ControlPanel {
 
       this.isAnalyzeEnabled.set(true);
       console.log('Imagem selecionada: ' + file.name);
+
+      //Emite o evento com o arquivo selecionado
+      this.imageSelected.emit(file);
     }
   }
 
@@ -41,7 +47,7 @@ export class ControlPanel {
   }
 
   onDownloadImage(): void{
-    // Lógica para download da imagem com faces reconhecidas
+    // Lógica para ‘download’ da imagem com faces reconhecidas
     console.log('Fazendo download da imagem...')
   }
 }

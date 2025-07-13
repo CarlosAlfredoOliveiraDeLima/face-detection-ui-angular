@@ -9,5 +9,21 @@ import {ImagePanel} from './image-panel/image-panel';
   styleUrl: './app.scss'
 })
 export class App {
+  protected readonly imagePreview = signal<string | null>(null);
+  protected readonly selectedOriginalFileImage = signal<File | null>(null);
+  //Estou mantendo o arquivo original, apenas para fins de enviar a imagem como um binário e não como base64
 
+  onImageSelected(file: File): void {
+    console.log('Imagem recebida no app.ts: ' + file.name);
+
+    //Arquivo armazenado apenas para fins didáticos e para o envio na API
+    //No envia da imagem para a API, a imagem será enviada como binário e não como base64
+    this.selectedOriginalFileImage.set(file);
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      this.imagePreview.set(e.target?.result as string);
+    };
+    reader.readAsDataURL(file);
+  }
 }

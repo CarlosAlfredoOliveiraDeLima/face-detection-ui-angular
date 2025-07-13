@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-image-panel',
@@ -7,10 +7,5 @@ import { Component, signal } from '@angular/core';
   styleUrl: './image-panel.scss'
 })
 export class ImagePanel {
-  protected readonly imagePreview = signal<string | null>(null);
-
-  // Método que será chamado quando uma imagem for selecionada
-  updateImagePreview(imageUrl: string): void{
-    this.imagePreview.set(imageUrl);
-  }
+  imagePreview = input<string | null>();
 }
