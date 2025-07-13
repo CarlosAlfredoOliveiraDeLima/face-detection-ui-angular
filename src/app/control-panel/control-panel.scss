@@ -1,0 +1,89 @@
+.left-panel {
+  flex: 0 0 35%;
+  background: #f9f9fb;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(75, 0, 130, 0.1);
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 280px;
+}
+
+/* Botão customizado para upload */
+.upload-btn {
+  background: #4b0082;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(75, 0, 130, 0.3);
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.02em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  &:hover {
+    background: #39006b;
+    box-shadow: 0 6px 18px rgba(75, 0, 130, 0.5);
+  }
+}
+
+/* Esconde o input file real */
+#uploadImage {
+  display: none;
+}
+
+.buttons-row {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  flex: 1;
+  background: #4b0082;
+  color: white;
+  border: none;
+  padding: 14px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(75, 0, 130, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background: #39006b;
+    box-shadow: 0 8px 20px rgba(75, 0, 130, 0.5);
+  }
+
+  &:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+.btn-icon {
+  width: 22px;
+  height: 22px;
+  fill: white;
+}
+
+#faceCount {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4b0082;
+  text-align: center;
+}

@@ -1,0 +1,37 @@
+<div class="left-panel">
+  <label for="uploadImage" class="upload-btn" tabindex="0" role="button" aria-label="Upload Image">
+    <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M5 20h14v-2H5zm7-18l-5 5h3v6h4v-6h3z"/>
+    </svg>
+    Choose Image
+  </label>
+  <input
+    type="file"
+    id="uploadImage"
+    accept="image/*"
+    (change)="onFileSelected($event)"
+  />
+
+  <div class="buttons-row">
+    <button
+      id="analyzeBtn"
+      [disabled]="!isAnalyzeEnabled()"
+      (click)="onAnalyzeFace()"
+    >
+      Analyze Faces
+    </button>
+    <button
+      id="downloadBtn"
+      [disabled]="!isDownloadEnabled()"
+      (click)="onDownloadImage()"
+    >
+      Download Image
+    </button>
+  </div>
+
+  @if (faceCount() > 0){
+    <div id="faceCount">
+      Faces detectadas: {{ faceCount() }}
+    </div>
+  })
+</div>

@@ -1,0 +1,13 @@
+<div class="right-panel">
+  @if (imagePreview()){
+    <img
+      [src]="imagePreview()"
+      alt="Uploaded image preview"
+      id="imagePreview"
+    />
+  }@else{
+    <div class="placeholder">
+      <p>Nenhuma imagem selecionada</p>
+    </div>
+  }
+</div>

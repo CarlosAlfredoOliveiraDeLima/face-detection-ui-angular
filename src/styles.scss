@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px 30px;
+}

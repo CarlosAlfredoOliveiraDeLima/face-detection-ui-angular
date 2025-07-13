@@ -1,0 +1,30 @@
+.right-panel {
+  flex: 0 0 65%;
+  background: #f9f9fb;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(75, 0, 130, 0.1);
+  padding: 30px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px;
+  overflow: hidden;
+}
+
+#imagePreview {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 14px;
+  object-fit: contain;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
