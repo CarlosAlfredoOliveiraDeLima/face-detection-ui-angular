@@ -11,13 +11,25 @@ export class ControlPanel {
   protected readonly isAnalyzeEnabled = signal<boolean>(false);
   protected readonly isDownloadEnabled = signal<boolean>(false);
 
-  onFileSelected(event: Event): void{
+  onFileSelected(event: Event): void {
     const input = event.target as HTMLInputElement;
-    if (input.files && input.files.length > 0){
+    if (input.files && input.files.length > 0) {
+      if (input.files.length > 1) {
+        alert('Por favor, selecione apens uma imagem.');
+        input.value = '';
+        return
+      }
+
       const file = input.files[0];
 
+      if (!file.type.startsWith('image/')) {
+        alert('Por favor, selecione apenas arquivos de imagem.');
+        input.value = '';
+        return
+      }
+
       this.isAnalyzeEnabled.set(true);
-      console.log('Arquivo selecionado: ' + file.name)
+      console.log('Imagem selecionada: ' + file.name);
     }
   }
 
