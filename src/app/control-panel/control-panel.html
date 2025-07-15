@@ -15,10 +15,10 @@
   <div class="buttons-row">
     <button
       id="analyzeBtn"
-      [disabled]="!isAnalyzeEnabled()"
+      [disabled]="!isAnalyzeEnabled() || isAnalyzing()"
       (click)="onAnalyzeFace()"
     >
-      Analyze Faces
+      {{ isAnalyzing() ? 'Analisando...' : 'Analyze Faces' }}
     </button>
     <button
       id="downloadBtn"
@@ -29,7 +29,7 @@
     </button>
   </div>
 
-  @if (faceCount() > 0){
+  @if (faceCount() > 0) {
     <div id="faceCount">
       Faces detectadas: {{ faceCount() }}
     </div>

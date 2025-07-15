@@ -1,6 +1,10 @@
 <h1>Face Detection App</h1>
 
-<div class="main-container">
-  <app-control-panel (imageSelected)="onImageSelected($event)"></app-control-panel>
+<div class="app-container">
+  <app-control-panel
+    (imageSelected)="onImageSelected($event)"
+    (processedImageReady)="onProcessedImageReady($event)">
+  </app-control-panel>
+
   <app-image-panel [imagePreview]="imagePreview()"></app-image-panel>
 </div>
