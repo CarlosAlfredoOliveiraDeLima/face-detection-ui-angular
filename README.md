@@ -1,4 +1,4 @@
-# 🎯 Face Detection UI Angular
+# Face Detection UI Angular
 
 Uma aplicação front-end desenvolvida em Angular para carregar imagens e exibir resultados de detecção facial, funcionando como interface para o serviço de detecção facial.
 
@@ -7,20 +7,20 @@ Uma aplicação front-end desenvolvida em Angular para carregar imagens e exibir
 ![RxJS](https://img.shields.io/badge/rxjs-7.8.0-purple.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## 📋 Descrição
+## Descrição
 
 Este projeto oferece uma interface amigável para fazer upload de imagens e visualizar os resultados da detecção de rostos. A aplicação se comunica com uma API de detecção facial, enviando imagens e recebendo de volta as imagens processadas com retângulos marcando os rostos detectados.
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
-- ✅ Interface intuitiva para upload de imagens
-- ✅ Visualização em tempo real da imagem selecionada
-- ✅ Processamento de detecção facial via API
-- ✅ Exibição do número de rostos detectados
-- ✅ Visualização da imagem processada com marcações
-- ✅ Validação de tipo de arquivo (apenas imagens)
+-  Interface intuitiva para upload de imagens
+-  Visualização em tempo real da imagem selecionada
+-  Processamento de detecção facial via API
+-  Exibição do número de rostos detectados
+-  Visualização da imagem processada com marcações
+-  Validação de tipo de arquivo (apenas imagens)
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **[Angular 20.1.0](https://angular.io/)** - Framework front-end
 - **[TypeScript 5.8.2](https://www.typescriptlang.org/)** - Linguagem de programação
@@ -28,13 +28,13 @@ Este projeto oferece uma interface amigável para fazer upload de imagens e visu
 - **[Angular Router](https://angular.io/api/router)** - Navegação da aplicação
 - **[Angular Forms](https://angular.io/api/forms)** - Manipulação de formulários
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
 - Node.js (versão LTS recomendada)
 - npm (gerenciador de pacotes Node.js)
 - API de detecção facial em execução (http://localhost:8080)
 
-## 🚀 Instalação
+## Instalação
 
 1. **Clone o repositório**
    ```bash
@@ -54,7 +54,7 @@ Este projeto oferece uma interface amigável para fazer upload de imagens e visu
 
 A aplicação estará disponível em `http://localhost:4200`
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 face-detection-ui-angular/
@@ -74,7 +74,7 @@ face-detection-ui-angular/
 └── README.md                        # Este arquivo
 ```
 
-## 🔧 Como Usar
+## Como Usar
 
 1. **Iniciar a aplicação**
    ```bash
@@ -97,7 +97,7 @@ face-detection-ui-angular/
 5. **Download da imagem processada** (funcionalidade em desenvolvimento)
    - Após a análise, clique em "Download Image" para salvar a imagem processada
 
-## 🔌 Comunicação com a API
+## Comunicação com a API
 
 A aplicação se comunica com uma API REST em `http://localhost:8080/api/faces/detect` através do serviço `FaceDetectionService`. O serviço envia a imagem como um arquivo binário usando `FormData` e recebe de volta:
 
@@ -106,7 +106,7 @@ A aplicação se comunica com uma API REST em `http://localhost:8080/api/faces/d
 - Informações sobre o sucesso da operação (`X-Success`)
 - O formato da imagem processada (`X-Format`)
 
-## 🧪 Testando a Aplicação
+## Testando a Aplicação
 
 ### Pré-requisitos para testes
 
@@ -122,7 +122,7 @@ A aplicação se comunica com uma API REST em `http://localhost:8080/api/faces/d
 5. Clique em "Analyze Faces" para processar a imagem
 6. Verifique se os rostos foram detectados corretamente
 
-## 🚨 Tratamento de Erros
+## Tratamento de Erros
 
 A aplicação implementa tratamento de erros para os seguintes casos:
 
@@ -131,19 +131,19 @@ A aplicação implementa tratamento de erros para os seguintes casos:
 - Falha na comunicação com a API
 - Erro durante o processamento da imagem
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 👥 Autor
+## Autor
 
 - **Carlos Alfredo Oliveira de Lima** - [GitHub](https://github.com/CarlosAlfredoOliveiraDeLima)
 
-## 🔗 Links Relacionados
+## Links Relacionados
 
 - [API middleware](https://github.com/CarlosAlfredoOliveiraDeLima/face-detection-api-spring) - API intermediária para integração com a API de detecção de faces
 - [API de detecção de faces](https://github.com/CarlosAlfredoOliveiraDeLima/face-detection-core-python) - API de processamento de imagens para detecção de faces
 
 ---
 
-⭐ **Gostou do projeto? Deixe uma estrela!** ⭐
+ **Gostou do projeto? Deixe uma estrela!** 
